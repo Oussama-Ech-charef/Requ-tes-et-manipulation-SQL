@@ -1,6 +1,6 @@
-drop database if exists Ralisation_blog_db;
-create database Ralisation_blog_db;
-use Ralisation_blog_db;
+drop database if exists blog_db;
+create database blog_db;
+use blog_db;
 CREATE TABLE users (
     id_user INT PRIMARY KEY AUTO_INCREMENT,
     user_name VARCHAR(50) NOT NULL,
@@ -64,7 +64,7 @@ INSERT INTO comments (content, publish_date, id_user, id_post) VALUES
 ('Merci pour ces informations.', '2024-02-16', 2, 2),
 ('bien article', '2024-03-21', 3, 3);
 
-use ralisation_blog_db ;
+use blog_db ;
 
 select * from posts;
 

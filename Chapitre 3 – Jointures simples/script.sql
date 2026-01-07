@@ -117,27 +117,3 @@ UPDATE posts SET nb_vues = 800  WHERE id_post = 20;
 
 
 
-
-SELECT p.title, p.publish_date, u.user_name
-FROM posts p
-INNER JOIN users u ON p.id_post = u.id_user;
-
-
-
-SELECT p.title, u.user_name
-FROM posts p
-INNER JOIN users u ON p.id_post = u.id_user
-WHERE u.user_name = 'oussama';
-
-
-
-select p.title, u.user_name
-from posts p 
-left join users u on p.id_user = u.id_user;
-
-
-
-select p.title , u.user_name , c.content
-from posts p 
-inner join users u on p.id_user = u.id_user
-inner join comments c on p.id_post = c.id_post;

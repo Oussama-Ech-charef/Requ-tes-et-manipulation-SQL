@@ -1,6 +1,6 @@
-drop database if exists blog_db;
-create database Ralisation_blog_db;
-use blog_db;
+drop database if exists jointures SQL;
+create database jointures SQL;
+use jointures SQL;
 CREATE TABLE users (
     id_user INT PRIMARY KEY AUTO_INCREMENT,
     user_name VARCHAR(50) NOT NULL,
@@ -113,46 +113,3 @@ UPDATE posts SET nb_vues = 120 WHERE id_post = 19;
 UPDATE posts SET nb_vues = 800  WHERE id_post = 20;
 
 
-
-
-
-
-
-
-SELECT COUNT(*) AS total_posts FROM posts;
-SELECT COUNT(*) AS total_catgory FROM category;
-SELECT COUNT(*) AS total_users FROM users;
-SELECT COUNT(*) AS total_comments FROM commentes;
-
-
-
-SELECT MAX(publish_date) AS derniere_publication FROM posts;
-
-
-
-SELECT id_user, COUNT(*) AS nb_posts
-FROM posts
-GROUP BY id_user;
-
-
-
-SELECT id_user, COUNT(*) AS nb_posts
-FROM posts
-GROUP BY id_user
-HAVING COUNT(*) <= 11;
-
-SELECT id_user, COUNT(*) AS nb_posts
-FROM posts
-GROUP BY id_user
-HAVING COUNT(*) >= 8;
-
-SELECT id_user, COUNT(*) AS nb_posts
-FROM posts
-GROUP BY id_user
-HAVING COUNT(*) = 12;
-
-
-SELECT AVG(nb_vues) AS moyenne_vues FROM posts;
-SELECT SUM(nb_vues) AS TOTAL_vues FROM posts;
-SELECT MIN(nb_vues) AS MIN_vues FROM posts;
-SELECT MAX(nb_vues) AS MAX_vues FROM posts;

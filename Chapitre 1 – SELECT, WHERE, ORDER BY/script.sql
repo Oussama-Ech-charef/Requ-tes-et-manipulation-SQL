@@ -1,6 +1,6 @@
-drop database if exists blog_db;
-create database blog_db;
-use blog_db;
+drop database if exists jointures SQL;
+create database jointures SQL;
+use jointures SQL;
 CREATE TABLE users (
     id_user INT PRIMARY KEY AUTO_INCREMENT,
     user_name VARCHAR(50) NOT NULL,
@@ -64,21 +64,6 @@ INSERT INTO comments (content, publish_date, id_user, id_post) VALUES
 ('Merci pour ces informations.', '2024-02-16', 2, 2),
 ('bien article', '2024-03-21', 3, 3);
 
-use blog_db ;
 
-select * from posts;
 
-SELECT title, publish_date FROM posts;
 
-SELECT title, publish_date
-FROM posts
-WHERE publish_date >= '2024-01-10';
-
-SELECT title, publish_date
-FROM posts
-ORDER BY publish_date DESC;
-
-SELECT title
-FROM posts
-ORDER BY publish_date DESC
-LIMIT 2;

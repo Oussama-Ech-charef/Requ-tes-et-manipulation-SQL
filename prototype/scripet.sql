@@ -68,3 +68,40 @@ INSERT INTO comments (content, publish_date, id_user, id_post) VALUES
 ('Super article!', '2025-05-11', 7, 4),
 ('Très utile, merci.', '2025-12-16', 6, 9),
 ('Je ne suis pas d''accord.', CURRENT_DATE, 4, 2);
+
+
+
+
+
+
+
+
+SELECT title, publish_date FROM Posts;
+
+SELECT * FROM users WHERE user_name LIKE 'EL%';
+
+SELECT * FROM Posts WHERE id_user = 3 ORDER BY publish_date ASC;
+
+SELECT * FROM Posts WHERE publish_date BETWEEN '2025-12-01' AND '2025-12-31';
+
+SELECT * FROM Posts WHERE publish_date = CURRENT_DATE;
+
+SELECT * FROM Posts WHERE id_user = 3 AND statu = 'draft';
+
+SELECT COUNT(*) FROM Posts P 
+JOIN users U ON P.id_user = U.id_user 
+WHERE U.user_name = 'Ahmed Alami' AND P.statu = 'published';
+
+SELECT MONTH(publish_date) AS Mois, COUNT(*) 
+FROM Posts WHERE YEAR(publish_date) = 2025 
+GROUP BY MONTH(publish_date);
+
+
+UPDATE Posts SET publish_date = '2026-01-02' WHERE id_post = 155;
+
+UPDATE Posts SET statu = 'draft' WHERE id_post = 155;
+
+
+DELETE FROM Posts WHERE id_user = 222;
+
+DELETE FROM users WHERE user_name = 'Ahmed Alami';

@@ -1,0 +1,136 @@
+##### \# la rockete 1 : **Afficher tous les articles (titre, datepub);**
+
+
+
+
+
+##### SELECT title, publish\_date 
+
+##### FROM Posts;
+
+
+
++---------------------------+--------------+
+
+| title                     | publish\_date |
+
++---------------------------+--------------+
+
+| Apprendre SQL             | 2025-05-10   |
+
+| Bases de Données          | 2025-05-20   |
+
+| Le futur du Web           | 2025-12-15   |
+
+| Sécurité Informatique     | 2025-03-12   |
+
+| Post de test 222          | 2025-04-10   |
+
+| Autre post 222            | 2025-04-15   |
+
+| Santé Mentale             | 2025-01-10   |
+
+| Recette Pizza             | 2025-02-05   |
+
+| Voyage à Bali             | 2025-02-20   |
+
+| Python pour débutants     | 2025-06-15   |
+
+| Entrainement Cardio       | 2025-07-22   |
+
+| Intelligence Artificielle | 2025-12-25   |
+
+| Actualité du Jour         | 2026-01-08   |
+
+| Météo du 8 Janvier        | 2026-01-08   |
+
++---------------------------+--------------+
+
+14 rows in set (0.00 sec)
+
+
+
+##### \# la rockete 2 : **Afficher les Utilisateurs dont le nom commence par 'EL';**
+
+
+
+##### SELECT \* 
+
+##### FROM users 
+
+##### WHERE user\_name LIKE 'EL%';
+
+
+
+**+---------+-------------+-------------------+------------+**
+
+**| id\_user | user\_name   | email             | date\_birth |**
+
+**+---------+-------------+-------------------+------------+**
+
+**|       3 | EL Mansouri | mansouri@mail.com | 1988-02-20 |**
+
+**|       4 | EL Idrissi  | idrissi@mail.com  | 1992-12-12 |**
+
+**|       6 | EL Amrani   | amrani@mail.com   | 1985-08-30 |**
+
+**+---------+-------------+-------------------+------------+**
+
+**3 rows in set (0.00 sec)**
+
+
+
+##### \# la rockete 3 :  **Afficher les articles de l'utilisateur "id : 3"**
+
+#####  **ordonnées par priorité par date croissant;**
+
+##### 
+
+##### SELECT \* 
+
+##### FROM Posts 
+
+##### WHERE id\_user = 3 
+
+##### ORDER BY publish\_date ASC;
+
+
+
++---------+-----------------------+------------+--------------+-----------+---------+-------------+
+
+| id\_post | title                 | content    | publish\_date | statu     | id\_user | id\_category |
+
++---------+-----------------------+------------+--------------+-----------+---------+-------------+
+
+|       9 | Voyage à Bali         | Contenu... | 2025-02-20   | published |       3 |           3 |
+
+|       4 | Sécurité Informatique | Contenu... | 2025-03-12   | published |       3 |           1 |
+
+|       2 | Bases de Données      | Contenu... | 2025-05-20   | draft     |       3 |           1 |
+
++---------+-----------------------+------------+--------------+-----------+---------+-------------+
+
+3 rows in set (0.00 sec)
+
+
+
+
+
+##### \# la rockete 4 : **Afficher les articles publiés le mois dernier;**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

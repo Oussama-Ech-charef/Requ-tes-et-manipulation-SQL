@@ -259,3 +259,31 @@ mysql> select * from posts;
 +---------+---------------------------+---------------------+--------------+-----------+---------+-------------+
 14 rows in set (0.00 sec)
 
+
+
+
+##### \# la rockete 11 : **Supprimer les posts de id_user '1'; 
+
+delete from posts where id_user = 1;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from posts;
++---------+---------------------------+---------------------+--------------+-----------+---------+-------------+
+| id_post | title                     | content             | publish_date | statu     | id_user | id_category |
++---------+---------------------------+---------------------+--------------+-----------+---------+-------------+
+|       1 | Apprendre SQL             | Contenu...          | 2025-05-10   | published |       2 |           1 |
+|       2 | Bases de Données          | Contenu...          | 2025-05-20   | draft     |       3 |           1 |
+|       4 | Sécurité Informatique     | Contenu...          | 2025-03-12   | published |       3 |           1 |
+|       5 | Post de test 222          | A supprimer...      | 2025-04-10   | published |       4 |           2 |
+|       6 | Autre post 222            | A supprimer...      | 2025-04-15   | published |       7 |           3 |
+|       7 | Santé Mentale             | Contenu...          | 2025-01-10   | published |       6 |           2 |
+|       8 | Recette Pizza             | Contenu...          | 2025-02-05   | published |       5 |           4 |
+|       9 | Voyage à Bali             | Contenu...          | 2025-02-20   | published |       3 |           3 |
+|      10 | Python pour débutants     | Contenu...          | 2025-06-15   | published |       4 |           1 |
+|      11 | Entrainement Cardio       | Contenu...          | 2025-07-22   | published |       5 |           5 |
+|      12 | Intelligence Artificielle | Contenu...          | 2025-12-25   | published |       2 |           1 |
+|      13 | Actualité du Jour         | Posté aujourdhui... | 2026-01-09   | published |       6 |           1 |
+|      14 | Météo du 8 Janvier        | Il fait beau...     | 2026-01-09   | published |       7 |           2 |
++---------+---------------------------+---------------------+--------------+-----------+---------+-------------+
+13 rows in set (0.00 sec)
+

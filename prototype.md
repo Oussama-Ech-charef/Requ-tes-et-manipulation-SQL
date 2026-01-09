@@ -77,3 +77,35 @@
 **+---------+-------------+-------------------+------------+**
 
 **3 rows in set (0.00 sec)**
+
+
+##### # la rockete 3 :  **Afficher les posts de users "id_user : 3"ordonnées par priorité par date croissant;**
+
+
+
+
+ SELECT *
+
+FROM Posts 
+
+WHERE id_user = 3 
+
+ ORDER BY publish_date ASC;
+
+
+
++---------+-----------------------+------------+--------------+-----------+---------+-------------+
+
+| id\_post | title                 | content    | publish\_date | statu     | id\_user | id\_category |
+
++---------+-----------------------+------------+--------------+-----------+---------+-------------+
+
+|       9 | Voyage à Bali         | Contenu... | 2025-02-20   | published |       3 |           3 |
+
+|       4 | Sécurité Informatique | Contenu... | 2025-03-12   | published |       3 |           1 |
+
+|       2 | Bases de Données      | Contenu... | 2025-05-20   | draft     |       3 |           1 |
+
++---------+-----------------------+------------+--------------+-----------+---------+-------------+
+
+3 rows in set (0.00 sec)

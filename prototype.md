@@ -287,3 +287,22 @@ mysql> select * from posts;
 +---------+---------------------------+---------------------+--------------+-----------+---------+-------------+
 13 rows in set (0.00 sec)
 
+
+##### \# la rockete 12 : **Supprimer user  "Ahmed Alami";
+
+DELETE FROM users WHERE user_name = 'Ahmed Alami';
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from users;
++---------+---------------+-------------------+------------+
+| id_user | user_name     | email             | date_birth |
++---------+---------------+-------------------+------------+
+|       2 | User 222      | test222@mail.com  | 1995-10-10 |
+|       3 | EL Mansouri   | mansouri@mail.com | 1988-02-20 |
+|       4 | EL Idrissi    | idrissi@mail.com  | 1992-12-12 |
+|       5 | Sara Tazi     | sara@mail.com     | 1998-04-05 |
+|       6 | EL Amrani     | amrani@mail.com   | 1985-08-30 |
+|       7 | Yassine Fahmi | yassine@mail.com  | 2001-01-25 |
++---------+---------------+-------------------+------------+
+6 rows in set (0.00 sec)
+

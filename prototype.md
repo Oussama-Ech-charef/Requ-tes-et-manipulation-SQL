@@ -47,3 +47,33 @@
 +---------------------------+--------------+
 
 14 rows in set (0.00 sec)
+
+
+
+##### \# la rockete 2 : **Afficher les users dont le nom commence par 'EL';**
+
+
+
+ SELECT * 
+
+ FROM users 
+
+ WHERE user_name LIKE 'EL%';
+
+
+
+**+---------+-------------+-------------------+------------+**
+
+**| id\_user | user\_name   | email             | date\_birth |**
+
+**+---------+-------------+-------------------+------------+**
+
+**|       3 | EL Mansouri | mansouri@mail.com | 1988-02-20 |**
+
+**|       4 | EL Idrissi  | idrissi@mail.com  | 1992-12-12 |**
+
+**|       6 | EL Amrani   | amrani@mail.com   | 1985-08-30 |**
+
+**+---------+-------------+-------------------+------------+**
+
+**3 rows in set (0.00 sec)**

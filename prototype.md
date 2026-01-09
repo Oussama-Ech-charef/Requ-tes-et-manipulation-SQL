@@ -157,3 +157,17 @@ select *
 |       9 | Voyage à Bali         | Contenu... | 2025-02-20   | published |       3 |           3 |
 +---------+-----------------------+------------+--------------+-----------+---------+-------------+
 2 rows in set (0.00 sec)
+
+
+
+##### \# la rockete 7 : **Afficher le nombre posts 'published' de users 'Ahmed Alami';
+
+
+SELECT COUNT(*) AS total_published
+  FROM posts p JOIN users u ON p.id_user = u.id_user WHERE u.user_name = 'Ahmed Alami' AND p.statu = 'published';
++-----------------+
+| total_published |
++-----------------+
+|               1 |
++-----------------+
+1 row in set (0.00 sec)

@@ -125,3 +125,19 @@ from posts
 |      12 | Intelligence Artificielle | Contenu... | 2025-12-25   | published |       2 |           1 |
 +---------+---------------------------+------------+--------------+-----------+---------+-------------+
 2 rows in set (0.00 sec)
+
+
+
+##### \# la rockete 5 : **Afficher tous les posts postés aujourd'hui.$;**
+
+
+select *
+    -> from posts
+    -> where month(curdate()) = month(publish_date) and year(curdate()) = year(publish_date);
++---------+--------------------+---------------------+--------------+-----------+---------+-------------+
+| id_post | title              | content             | publish_date | statu     | id_user | id_category |
++---------+--------------------+---------------------+--------------+-----------+---------+-------------+
+|      13 | Actualité du Jour  | Posté aujourdhui... | 2026-01-09   | published |       6 |           1 |
+|      14 | Météo du 8 Janvier | Il fait beau...     | 2026-01-09   | published |       7 |           2 |
++---------+--------------------+---------------------+--------------+-----------+---------+-------------+
+2 rows in set (0.00 sec)

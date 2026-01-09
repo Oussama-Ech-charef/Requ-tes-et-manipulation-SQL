@@ -171,3 +171,30 @@ SELECT COUNT(*) AS total_published
 |               1 |
 +-----------------+
 1 row in set (0.00 sec)
+
+
+
+##### \# la rockete 8 : **Combien posts ont été published par mois dans l'année 2025;
+
+
+select month(publish_date) as month,
+    -> count(*) as posts_count
+    -> from posts
+    -> where year(publish_date) = 2025 and statu = 'published'
+    -> group by month(publish_date)
+    -> order by month(publish_date);
+
++-------+-------------+
+| month | posts_count |
++-------+-------------+
+|     1 |           1 |
+|     2 |           2 |
+|     3 |           1 |
+|     4 |           2 |
+|     5 |           1 |
+|     6 |           1 |
+|     7 |           1 |
+|    12 |           2 |
++-------+-------------+
+8 rows in set (0.01 sec)
+

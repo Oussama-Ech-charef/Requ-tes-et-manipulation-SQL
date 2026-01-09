@@ -109,3 +109,19 @@ WHERE id_user = 3
 +---------+-----------------------+------------+--------------+-----------+---------+-------------+
 
 3 rows in set (0.00 sec)
+
+
+
+##### \# la rockete 4 : **Afficher les posts publiés le mois dernier;**
+
+
+select  * 
+from posts
+     where month(date_add(curdate(), interval -1 month)) = month(publish_date) and year(date_add(curdate(), interval -1 month)) = year(publish_date);
++---------+---------------------------+------------+--------------+-----------+---------+-------------+
+| id_post | title                     | content    | publish_date | statu     | id_user | id_category |
++---------+---------------------------+------------+--------------+-----------+---------+-------------+
+|       3 | Le futur du Web           | Contenu... | 2025-12-15   | published |       1 |           1 |
+|      12 | Intelligence Artificielle | Contenu... | 2025-12-25   | published |       2 |           1 |
++---------+---------------------------+------------+--------------+-----------+---------+-------------+
+2 rows in set (0.00 sec)

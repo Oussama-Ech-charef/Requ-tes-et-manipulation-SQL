@@ -141,3 +141,19 @@ select *
 |      14 | Météo du 8 Janvier | Il fait beau...     | 2026-01-09   | published |       7 |           2 |
 +---------+--------------------+---------------------+--------------+-----------+---------+-------------+
 2 rows in set (0.00 sec)
+
+
+
+##### \# la rockete 6 : **Afficher les posts archivés de users 'id_user = 3';**
+
+
+select *
+ from posts
+  where id_user = 3 and statu = 'published';
++---------+-----------------------+------------+--------------+-----------+---------+-------------+
+| id_post | title                 | content    | publish_date | statu     | id_user | id_category |
++---------+-----------------------+------------+--------------+-----------+---------+-------------+
+|       4 | Sécurité Informatique | Contenu... | 2025-03-12   | published |       3 |           1 |
+|       9 | Voyage à Bali         | Contenu... | 2025-02-20   | published |       3 |           3 |
++---------+-----------------------+------------+--------------+-----------+---------+-------------+
+2 rows in set (0.00 sec)

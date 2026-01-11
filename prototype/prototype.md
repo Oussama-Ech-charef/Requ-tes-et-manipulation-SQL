@@ -131,14 +131,12 @@ from posts
 ##### \# la rockete 5 : **Afficher tous les posts postés aujourd'hui.$;**
 
 
-select *
-    -> from posts
-    -> where month(curdate()) = month(publish_date) and year(curdate()) = year(publish_date);
+ select * from posts where publish_date =  curdate();
 +---------+--------------------+---------------------+--------------+-----------+---------+-------------+
 | id_post | title              | content             | publish_date | statu     | id_user | id_category |
 +---------+--------------------+---------------------+--------------+-----------+---------+-------------+
-|      13 | Actualité du Jour  | Posté aujourdhui... | 2026-01-09   | published |       6 |           1 |
-|      14 | Météo du 8 Janvier | Il fait beau...     | 2026-01-09   | published |       7 |           2 |
+|      13 | Actualité du Jour  | Posté aujourdhui... | 2026-01-11   | published |       6 |           1 |
+|      14 | Météo du 8 Janvier | Il fait beau...     | 2026-01-11   | published |       7 |           2 |
 +---------+--------------------+---------------------+--------------+-----------+---------+-------------+
 2 rows in set (0.00 sec)
 

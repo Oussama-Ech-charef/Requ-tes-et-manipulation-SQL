@@ -68,3 +68,7 @@ INSERT INTO comments (content, publish_date, id_user, id_post) VALUES
 ('Super article!', '2025-05-11', 7, 4),
 ('Très utile, merci.', '2025-12-16', 6, 9),
 ('Je ne suis pas d''accord.', CURRENT_DATE, 4, 2);
+INSERT INTO comments (content, publish_date, id_user, id_post) VALUES
+('Super article!', '2025-05-11', 7, 4),
+('Très utile, merci.', '2025-12-16', 6, 9),
+('Je ne suis pas d''accord.', CURRENT_DATE, 4, 2);
